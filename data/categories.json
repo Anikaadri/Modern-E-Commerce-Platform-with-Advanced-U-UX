@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Electronics",
+    "description": "Computers, laptops, and electronic devices"
+  },
+  {
+    "id": 2,
+    "name": "Accessories",
+    "description": "Computer accessories and peripherals"
+  },
+  {
+    "id": 3,
+    "name": "Software",
+    "description": "Software and digital products"
+  },
+  {
+    "id": 4,
+    "name": "Office Supplies",
+    "description": "Office and workspace essentials"
+  }
+]

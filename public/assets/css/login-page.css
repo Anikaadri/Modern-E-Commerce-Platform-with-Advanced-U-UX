@@ -1,0 +1,438 @@
+/**
+ * Login/Register Page Styles
+ * Modern authentication UI with animations
+ */
+
+/* ============================================
+   LOGIN CONTAINER
+   ============================================ */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--primary-50) 0%, var(--secondary-50) 100%);
+}
+
+.login-card {
+    background: white;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-2xl);
+    overflow: hidden;
+    max-width: 450px;
+    width: 100%;
+    animation: scaleIn 0.4s ease;
+}
+
+.login-header {
+    padding: 2.5rem 2rem 1.5rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-700) 100%);
+    color: white;
+}
+
+.login-logo {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.login-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.login-subtitle {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* ============================================
+   FORM TOGGLE
+   ============================================ */
+.form-toggle {
+    display: flex;
+    padding: 0.5rem;
+    background: var(--gray-100);
+    border-radius: var(--radius-lg);
+    margin: 2rem 2rem 1.5rem;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    background: transparent;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    color: var(--gray-600);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+    background: white;
+    color: var(--primary-600);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ============================================
+   FORM SECTIONS
+   ============================================ */
+.login-form,
+.register-form {
+    padding: 0 2rem 2.5rem;
+    display: none;
+}
+
+.login-form.active,
+.register-form.active {
+    display: block;
+    animation: fadeInUp 0.3s ease;
+}
+
+.form-group-login {
+    margin-bottom: 1.25rem;
+}
+
+.form-label-login {
+    display: block;
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.input-group {
+    position: relative;
+}
+
+.form-input-login {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.form-input-login:focus {
+    outline: none;
+    border-color: var(--primary-600);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+.form-input-login.error {
+    border-color: var(--error);
+}
+
+/* Password Toggle */
+.password-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--gray-500);
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding: 0.25rem;
+}
+
+.password-toggle:hover {
+    color: var(--gray-700);
+}
+
+/* Password Strength Indicator */
+.password-strength {
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.password-strength.show {
+    display: block;
+}
+
+.strength-bar {
+    height: 4px;
+    background: var(--gray-200);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.strength-fill {
+    height: 100%;
+    width: 0%;
+    transition: all 0.3s ease;
+    border-radius: var(--radius-full);
+}
+
+.strength-fill.weak {
+    width: 33%;
+    background: var(--error);
+}
+
+.strength-fill.medium {
+    width: 66%;
+    background: var(--warning);
+}
+
+.strength-fill.strong {
+    width: 100%;
+    background: var(--success);
+}
+
+.strength-text {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.strength-text.weak {
+    color: var(--error);
+}
+
+.strength-text.medium {
+    color: var(--warning);
+}
+
+.strength-text.strong {
+    color: var(--success);
+}
+
+/* ============================================
+   FORM ELEMENTS
+   ============================================ */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1.5rem 0;
+}
+
+.checkbox-input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.checkbox-label {
+    font-size: 0.875rem;
+    color: var(--gray-700);
+    cursor: pointer;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.forgot-link {
+    color: var(--primary-600);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn-login,
+.btn-register {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-600);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 1rem;
+}
+
+.btn-login:hover,
+.btn-register:hover {
+    background: var(--primary-700);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-login:active,
+.btn-register:active {
+    transform: translateY(0);
+}
+
+.btn-login:disabled,
+.btn-register:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ============================================
+   SOCIAL LOGIN
+   ============================================ */
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+    color: var(--gray-500);
+    font-size: 0.875rem;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--gray-300);
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.875rem;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-md);
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 600;
+    color: var(--gray-700);
+}
+
+.social-btn:hover {
+    background: var(--gray-50);
+    border-color: var(--gray-400);
+}
+
+.social-icon {
+    font-size: 1.25rem;
+}
+
+.social-btn.google .social-icon {
+    color: #DB4437;
+}
+
+.social-btn.facebook .social-icon {
+    color: #1877F2;
+}
+
+.social-btn.apple .social-icon {
+    color: #000000;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.login-footer {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    background: var(--gray-50);
+    color: var(--gray-600);
+    font-size: 0.875rem;
+}
+
+.login-footer a {
+    color: var(--primary-600);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================
+   ERROR/SUCCESS MESSAGES
+   ============================================ */
+.message-box {
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1.5rem;
+    display: none;
+    animation: fadeInUp 0.3s ease;
+}
+
+.message-box.show {
+    display: block;
+}
+
+.message-box.error {
+    background: var(--error-light);
+    color: var(--error);
+    border: 1px solid var(--error);
+}
+
+.message-box.success {
+    background: var(--success-light);
+    color: var(--success);
+    border: 1px solid var(--success);
+}
+
+/* ============================================
+   LOADING STATE
+   ============================================ */
+.btn-loading {
+    position: relative;
+    color: transparent !important;
+}
+
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 1rem;
+    }
+
+    .login-card {
+        max-width: 100%;
+    }
+
+    .login-header {
+        padding: 2rem 1.5rem 1rem;
+    }
+
+    .login-form,
+    .register-form {
+        padding: 0 1.5rem 2rem;
+    }
+
+    .form-toggle {
+        margin: 1.5rem 1.5rem 1rem;
+    }
+}

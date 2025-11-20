@@ -1,0 +1,51 @@
+/* Drag Handle */
+.drag-handle {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: move;
+    user-select: none;
+    transition: color 0.2s ease;
+}
+
+header:hover .drag-handle {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Reset Button */
+.reset-header-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-600);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    z-index: 10000;
+    transition: all 0.2s ease;
+}
+
+.reset-header-btn:hover {
+    transform: scale(1.1);
+    background: var(--primary-700);
+}
+
+.reset-header-btn:active {
+    transform: scale(0.95);
+}
+
+/* Prevent text selection while dragging */
+body.dragging {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}

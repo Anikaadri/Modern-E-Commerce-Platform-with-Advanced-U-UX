@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Allow direct access to setup.php, index.php and other main files
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/online-shop/public/(setup|index|login|register|logout|product|category|cart|checkout|user|admin|order)\.php
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+# Prevent direct access to sensitive files
+<FilesMatch "\.(env|json)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>

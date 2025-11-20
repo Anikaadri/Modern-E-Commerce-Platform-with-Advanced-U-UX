@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop Pro",
+    "description": "High-performance laptop for professionals",
+    "price": 1299.99,
+    "stock": 15,
+    "category_id": 1,
+    "image": "laptop.jpg",
+    "is_featured": 1
+  },
+  {
+    "id": 2,
+    "name": "USB-C Cable",
+    "description": "High-speed USB-C cable",
+    "price": 19.99,
+    "stock": 100,
+    "category_id": 2,
+    "image": "usb-c.jpg",
+    "is_featured": 1
+  },
+  {
+    "id": 3,
+    "name": "Wireless Mouse",
+    "description": "Ergonomic wireless mouse with long battery life",
+    "price": 29.99,
+    "stock": 50,
+    "category_id": 2,
+    "image": "mouse.jpg",
+    "is_featured": 0
+  },
+  {
+    "id": 4,
+    "name": "Mechanical Keyboard",
+    "description": "Premium mechanical keyboard with RGB lighting",
+    "price": 149.99,
+    "stock": 30,
+    "category_id": 2,
+    "image": "keyboard.jpg",
+    "is_featured": 1
+  },
+  {
+    "id": 5,
+    "name": "4K Monitor",
+    "description": "27-inch 4K ultra HD monitor",
+    "price": 399.99,
+    "stock": 20,
+    "category_id": 1,
+    "image": "monitor.jpg",
+    "is_featured": 1
+  }
+]
